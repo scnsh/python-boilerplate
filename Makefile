@@ -12,7 +12,8 @@ venv/bin/activate:
 .PHONY: setup
 setup: venv requirements/common.txt
 	. venv/bin/activate; \
-	pip install -r requirements/common.txt
+	pip install -r requirements/common.txt; \
+	pre-commit install
 
 requirements/common.txt: requirements/common.in
 	${PIP_COMPILE} requirements/common.in --output-file requirements/common.txt
