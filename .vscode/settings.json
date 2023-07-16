@@ -1,0 +1,14 @@
+{
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": null,
+			"editor.formatOnSave": true,
+			"editor.codeActionsOnSave": {
+				"source.fixAll.ruff": true,
+				"source.organizeImports.ruff": true
+			},
+		},
+		"files.insertFinalNewline": true,
+		"files.trimTrailingWhitespace": true,
+	}
+}
