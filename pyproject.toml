@@ -1,8 +1,27 @@
+[project]
+name = "python-boilerplate"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.32.3",
+]
+
+
 [tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
 # # select で指定するとチェックの対象のルールとなる
 # select = ["I", "N"] # Iはisort, Nはpep8-naming
 # # ignore で指定するとチェックの対象外のルールとなる
 # ignore = ["E", "F"] # Eはpycodestyle, Fはpyflakes
 select = ["E", "F", "I"]
 unfixable = ["F401", "F841"] # F401はimportが未使用, F841は変数が未使用 それぞれの修正は行わない
-line-length = 120
+
+[tool.uv]
+dev-dependencies = [
+    "pre-commit>=4.0.1",
+    "ruff>=0.7.0",
+]
